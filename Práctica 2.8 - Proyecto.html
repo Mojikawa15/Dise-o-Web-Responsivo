@@ -1,14 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Práctica 2.8 - Proyecto</title>
     <link rel="stylesheet" href="css/styles-2.8.css" type="text/css" />
 
-
 </head>
 <body>
-    
+    <div class="contenedor">
+        <header class="título">
+            <h1>Cádiz</h1>
+            <nav>
+                <div></div>
+                <div class="menú">Inicio</div>
+                <div class="menú">Nosotros</div>
+                <div class="menú">Contacto</div>
+                <div class="menú">Soporte</div>
+            </nav>
+        </header>
+        <main>
+            <section class="principal">
+                <div>
+                    <h1 class="título">Lugares para visitar en Cádiz</h1>
+                </div>
+                <div>
+                    <p>
+                        A continuación, se encuentran los lugares que debes visitar
+                        si vienes a Cádiz.
+                    </p>
+                    <p>
+                        Cádiz tiene unos lugares muy característicos que no te
+                        puedes perder.
+                    </p>
+                </div>
+            </section>
+            <section class="lugares">
+                <img src="img/alameda.jpg">     <img src="img/parque_genovés.jpg">
+                <img src="img/caleta.jpg">      <img src="img/plaza_flores.jpeg">
+                <img src="img/calle_ancha.jpg"> <img src="img/plaza_mina.jpg">
+                <img src="img/catedral.jpg">    <img src="img/viña.jpg">
+                <img class="oculto" src="img/alameda.jpg">
+            </section>
+        </main>
+        <section class="noticias">
+            <h2 class="título">Noticias</h2>
+            <article>
+                <h4>18 de enero</h4>
+                <h3 class="título">Noticia 1</h3>
+                <p>
+                    En el día de hoy, la catedral de Cádiz, se ha abarrotado
+                    de gente.
+                </p>
+            </article>
+            <article>
+                <h4>19 de enero</h4>
+                <h3 class="título">Noticia 2</h3>
+                <p>
+                    En el día de hoy, en la plaza de las flores se ha realizado
+                    un tablao flamenco.
+                </p>
+            </article>
+            <article>
+                <h4>20 de enero</h4>
+                <h3 class="título">Noticia 3</h3>
+                <p>
+                    En el día de hoy, llegaron alumnos de los institutos de 
+                    Málaga al parque genovés y alimentaron a los patos.
+                </p>
+            </article>
+        </section>
+    </div>
+    <script>
+        $(function() {
+            //Captura del evento para mostrar u ocultar
+            $(".icon").click(function() {
+            $(".menu_item").toggle();
+            });
+            $(window).resize(function() {
+            var anchura = $(this).width();
+            if (anchura > 576) {
+                $(".menu_item").show();
+            }
+            });
+        });
+    </script>
 </body>
 </html>
